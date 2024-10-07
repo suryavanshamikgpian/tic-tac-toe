@@ -7,7 +7,7 @@ using namespace std;
 #define COMPUTERMOVE 'O' // Computer will use 'O'
 #define HUMANMOVE 'X'    // Human will use 'X'
 
-// Function to display the Tic-Tac-Toe board
+// display Tic-Tac-Toe board
 void showBoard(char board[][SIDE])
 {
     printf("\t\t\t %c | %c | %c \n", board[0][0], board[0][1], board[0][2]);
@@ -17,7 +17,7 @@ void showBoard(char board[][SIDE])
     printf("\t\t\t %c | %c | %c \n\n", board[2][0], board[2][1], board[2][2]);
 }
 
-// Function to display instructions on how to play the game
+//instructions on how to play the game
 void showInstructions()
 {
     printf("\nChoose a cell numbered from 1 to 9 as below and play\n\n");
@@ -28,7 +28,7 @@ void showInstructions()
     printf("\t\t\t 7 | 8 | 9 \n\n");
 }
 
-// Function to initialize the board with '*' in all cells
+//initialize the board with '*' in all cells
 void initialise(char board[][SIDE])
 {
     for (int i = 0; i < SIDE; i++)
@@ -38,7 +38,7 @@ void initialise(char board[][SIDE])
     }
 }
 
-// Function to declare the winner
+//declare the winner
 void declareWinner(int whoseTurn)
 {
     if (whoseTurn == COMPUTER)
@@ -47,7 +47,7 @@ void declareWinner(int whoseTurn)
         cout << "HUMAN has won\n";
 }
 
-// Function to check if any row is crossed
+// check if any row is crossed
 bool rowCrossed(char board[][SIDE])
 {
     for (int i = 0; i < SIDE; i++)
@@ -60,7 +60,7 @@ bool rowCrossed(char board[][SIDE])
     return (false);
 }
 
-// Function to check if any column is crossed
+// check if any column is crossed
 bool columnCrossed(char board[][SIDE])
 {
     for (int i = 0; i < SIDE; i++)
@@ -73,7 +73,7 @@ bool columnCrossed(char board[][SIDE])
     return (false);
 }
 
-// Function to check if any diagonal is crossed
+//check if any diagonal is crossed
 bool diagonalCrossed(char board[][SIDE])
 {
     if (board[0][0] == board[1][1] &&
@@ -89,9 +89,10 @@ bool diagonalCrossed(char board[][SIDE])
     return (false);
 }
 
-// Function to check if the game is over (either by win or draw)
+//check if the game is over
 bool gameOver(char board[][SIDE])
 {
+    //by win or draw also
     return (rowCrossed(board) || columnCrossed(board) || diagonalCrossed(board));
 }
 
