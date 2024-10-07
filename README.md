@@ -1,8 +1,15 @@
 # tic-tac-toe
 showBoard(char board[][SIDE]):
 Displays the current state of the Tic-Tac-Toe board. It prints the board in a 3x3 grid format using the current player moves ('X' or 'O') and empty cells as '*'.
+
+
+
+
 showInstructions():
 Displays the numbered layout of the board to help players know which number corresponds to which position on the board.
+
+
+
 initialise(char board[][SIDE]):
 Initializes the board by filling all the cells with the character '*' to represent empty spaces.
 declareWinner(int whoseTurn):
